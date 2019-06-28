@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <form #inputForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+          <label for="pcwsUrl" class="col-sm-2 col-form-label">pcwsUrl</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="pcwsUrl" name="pcwsUrl" [(ngModel)]="pcwsUrl">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="accountName" class="col-sm-2 col-form-label">accountName</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="accountName" name="accountName" [(ngModel)]="codeRequest.accountName">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="serviceType" class="col-sm-2 col-form-label">serviceType</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="serviceType" id="serviceType" [(ngModel)]="codeRequest.serviceType">
+              <option *ngFor="let serviceType of serviceTypes" [value]="serviceType">{{serviceType}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" name="name"
+                   [(ngModel)]="codeRequest.addressData.name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="address" class="col-sm-2 col-form-label">address</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="address" name="address" name="address"
+                   [(ngModel)]="codeRequest.addressData.address">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="zipCode" class="col-sm-2 col-form-label">zipCode</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="zipCode" name="zipCode" name="zipCode"
+                   [(ngModel)]="codeRequest.addressData.zipCode">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="town" class="col-sm-2 col-form-label">town</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="town" name="town" name="town"
+                   [(ngModel)]="codeRequest.addressData.town">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div class="col-6">
+      <div *ngIf="message" class="alert alert-info">{{message}}</div>
+
+      <img *ngIf="image"
+           [src]="image"
+           alt="Generated Barcode"
+           class="img-fluid barcode">
+    </div>
+  </div>
+</div>
+

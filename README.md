@@ -1,3 +1,7 @@
+# pcws-viewer
+
 Auxiliary service for the BFH AppTrans exercise.
 
-See https://github.com/SamuelBucheliZ/bfh-apptrans-exercise/blob/master/README.md
+Live at https://samuelbucheliz.github.io/bfh-pcws-viewer/
+
+See also https://github.com/SamuelBucheliZ/bfh-apptrans-exercise/blob/master/README.md
